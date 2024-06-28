@@ -1,8 +1,6 @@
 package dominoGame;
 
 import game.BasicState;
-import game.State.Status;
-import game.State.Player;
 
 /**
  * Represents the states of a domino game played on a chessboard.
