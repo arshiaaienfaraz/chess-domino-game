@@ -4,8 +4,16 @@ import game.console.BasicGame;
 
 import java.util.Scanner;
 
+/**
+ * Conducts a domino game on the console.
+ */
 public class ConsoleGame {
 
+    /**
+     * The entry point of the application.
+     *
+     * @param args the input arguments
+     */
     public static void main(String[] args) {
         var state = new DominoState();
         var game = new BasicGame<>(state, ConsoleGame::parseMove);

@@ -4,17 +4,29 @@ import game.BasicState;
 import game.State.Status;
 import game.State.Player;
 
+/**
+ * Represents the states of a domino game played on a chessboard.
+ */
 public class DominoState implements BasicState<String> {
 
     private static final int SIZE = 8;
     private final boolean[][] board;
     private Player currentPlayer;
 
+    /**
+     * Initializes a new game state with an empty board and Player 1 to start.
+     */
     public DominoState() {
         this.board = new boolean[SIZE][SIZE];
         this.currentPlayer = Player.PLAYER_1;
     }
 
+    /**
+     * Checks if a move is legal.
+     *
+     * @param move the move to check in the format {@code "x1 y1 x2 y2"}
+     * @return {@code true} if the move is legal, {@code false} otherwise
+     */
     @Override
     public boolean isLegalMove(String move) {
         String[] parts = move.split(" ");
@@ -52,6 +64,11 @@ public class DominoState implements BasicState<String> {
                 || (x1 == x2 && Math.abs(y1 - y2) == 1);
     }
 
+    /**
+     * Makes a move on the board.
+     *
+     * @param move the move to make in the format {@code "x1 y1 x2 y2"}
+     */
     @Override
     public void makeMove(String move) {
         String[] parts = move.split(" ");
@@ -65,11 +82,21 @@ public class DominoState implements BasicState<String> {
         currentPlayer = currentPlayer.opponent();
     }
 
+    /**
+     * Gets the next player.
+     *
+     * @return the next player
+     */
     @Override
     public Player getNextPlayer() {
         return currentPlayer;
     }
 
+    /**
+     * Checks if the game is over.
+     *
+     * @return {@code true} if the game is over, {@code false} otherwise
+     */
     @Override
     public boolean isGameOver() {
         return !hasLegalMoves(currentPlayer)
@@ -105,6 +132,11 @@ public class DominoState implements BasicState<String> {
         return false;
     }
 
+    /**
+     * Gets the current status of the game.
+     *
+     * @return the current status
+     */
     @Override
     public Status getStatus() {
         if (!isGameOver()) {
@@ -114,6 +146,11 @@ public class DominoState implements BasicState<String> {
                 Player.PLAYER_1 ? Status.PLAYER_1_WINS : Status.PLAYER_2_WINS;
     }
 
+    /**
+     * Returns a string representation of the board.
+     *
+     * @return the board as a string
+     */
     @Override
     public String toString() {
         StringBuilder sb = new StringBuilder("  1 2 3 4 5 6 7 8\n");
