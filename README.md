@@ -56,9 +56,9 @@ To start the game, run the `ConsoleGame` class. You will be prompted to enter mo
 
 ## Project Structure
 
-- `src/main/java/games/domino/DominoState.java`: Implements the game state and rules.
-- `src/main/java/games/domino/ConsoleGame.java`: Main class to run the game in the console.
-- `src/test/java/games/domino/DominoStateTest.java`: Unit tests for the `DominoState` class.
+- `src/main/java/dominoGame/DominoState.java`: Implements the game state and rules.
+- `src/main/java/dominoGame/ConsoleGame.java`: Main class to run the game in the console.
+- `src/test/java/dominoGame/DominoStateTest.java`: Unit tests for the `DominoState` class.
 
 ## Maven Configuration
 
