@@ -4,14 +4,16 @@
     <modelVersion>4.0.0</modelVersion>
     <groupId>hu.unideb.inf</groupId>
     <artifactId>chess-domino-game</artifactId>
-    <version>1.0.0</version>
+    <version>1.0</version>
     <packaging>jar</packaging>
     <description>A two-player chess domino game</description>
     <developers>
         <developer>
-            <id>student</id>
+            <id>JN2M82</id>
             <name>Arshia Aienfaraz</name>
             <email>arshia.aienfaraz@gmail.com</email>
+            <organization>Faculty of Informatics, University of Debrecen</organization>
+            <organizationUrl>https://inf.unideb.hu/</organizationUrl>
         </developer>
     </developers>
     <properties>
@@ -21,7 +23,7 @@
         <javafx.version>22.0.1</javafx.version>
         <junit.jupiter.version>5.10.2</junit.jupiter.version>
         <jacoco.version>0.8.12</jacoco.version>
-        <maven.checkstyle.version>3.4.0</maven.checkstyle.version>
+        <maven.checkstyle.version>3.3.1</maven.checkstyle.version>
         <maven.surefire.version>3.2.5</maven.surefire.version>
         <exec.mainClass>dominoGame.ConsoleGame</exec.mainClass>
     </properties>
@@ -72,7 +74,7 @@
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-shade-plugin</artifactId>
-                <version>3.6.0</version>
+                <version>3.5.3</version>
                 <executions>
                     <execution>
                         <goals>
@@ -125,7 +127,7 @@
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-javadoc-plugin</artifactId>
-                <version>3.7.0</version>
+                <version>3.6.3</version>
                 <reportSets>
                     <reportSet>
                         <reports>
@@ -137,7 +139,7 @@
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-jxr-plugin</artifactId>
-                <version>3.4.0</version>
+                <version>3.3.2</version>
             </plugin>
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
